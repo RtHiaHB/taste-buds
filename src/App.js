@@ -2,6 +2,14 @@ import logo from './logo.svg';
 import './App.css';
 import TBNavBar from './NavBar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import About from './About';
+import Home from './Home';
+import Locations from './Locations';
+import Contact from './Contact'
+import Menu from './Menu'
+import Order from './Order'
+import Events from './Events';
+import SignIn from './SignIn';
 
 function App() {
   return (
