@@ -9,10 +9,12 @@ import Menu from './Menu'
 import Order from './Order'
 import Events from './Events';
 import SignIn from './SignIn';
+import "./css/style.css"
 
 function App() {
   return (
     <div>
+    
       <TBNavBar />
       <Router>
         <Routes>
@@ -29,5 +31,7 @@ function App() {
     </div>
   );
 }
+
+
 
 export default App;
