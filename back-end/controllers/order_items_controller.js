@@ -62,3 +62,5 @@ order_items.delete('/:id', async (req, res) => {
         res.status(500).json(err)
     }
 })
+
+module.exports = order_items
