@@ -23,6 +23,9 @@ const itemsController = require('./controllers/items_controller')
 app.use('/items', itemsController)
 const locationsController = require('./controllers/locations_controller')
 app.use('/locations', locationsController)
+const orderItemsController = require('./controllers/order_items_controller')
+app.use('/order_items', orderItemsController)
+
 
 app.listen(process.env.PORT, () => {
     console.log(`Cooking on port: ${process.env.PORT}`)
