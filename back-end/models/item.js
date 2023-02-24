@@ -19,10 +19,18 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Item.init({
-    items_id: {
-      type:DataTypes.INTEGER,
+    item_id: {
+      type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
+      allowNull: false
+    },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    category: {
+      type: DataTypes.STRING,
       allowNull: false
     },
     description: {
@@ -30,7 +38,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     price: {
-      type:DataTypes.DOUBLE,
+      type: DataTypes.DOUBLE,
       allowNull: false
     }
   }, {

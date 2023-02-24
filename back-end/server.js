@@ -1,5 +1,6 @@
 // DEPENDENCIES
 const express = require('express')
+const cors = require('cors')
 const app = express()
 const { Sequelize } = require('sequelize')
 
@@ -7,6 +8,7 @@ const { Sequelize } = require('sequelize')
 require('dotenv').config()
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
+app.use(cors())
 
 //ROOT
 app.get('/', (req, res) => {

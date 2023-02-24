@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <div>
             <h1>HOME</h1>
-            <video autoPlay loop muted class="back-video">
+            <video autoPlay loop muted className="back-video">
                 <source src={burger} type="video/mp4" />
 
             </video>
