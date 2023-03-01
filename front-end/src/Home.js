@@ -6,12 +6,13 @@ import burger from "./video/burger.mp4"
 const Home = () => {
     return (
         <div>
-            <h1>HOME</h1>
-            <video autoPlay loop muted className="back-video">
-                <source src={burger} type="video/mp4" />
+            <h1>Taste Buds</h1>
+            <div>
+                <video autoPlay loop muted className="back-video">
+                    <source src={burger} type="video/mp4" />
 
-            </video>
-
+                </video>
+            </div>
         </div>
     )
 }
