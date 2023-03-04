@@ -1,9 +1,10 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-import MenuItem from './MenuItem'
+//import MenuItem from './MenuItem'
+import Category from './Category'
 
 const Menu = () => {
-    const [menu, setMenu] = useState(null)
+    const [menu, setMenu] = useState([])
     const fetchMenu = async () => {
         const url = 'http://localhost:4000/items'
         const response = await fetch(url)
@@ -21,18 +22,19 @@ const Menu = () => {
         }
     })
     const display = () => {
-        let result = []
-        try {
-            result = menu.map((item, i) => {
-                return (
-                    <MenuItem key={i} item={item} />
-                )
-            })
-        } catch (err) {
-            console.log(err)
-            result.push = err
+        if(menu.length === 0) {
+            fetchMenu()
         }
-        return result
+        return (
+            <div>
+                <Category category={'Appetizers'} data={menu} />
+                <Category category={'Salads'} data={menu} />
+                <Category category={'Entrees'} data={menu} />
+                <Category category={'Sides'} data={menu} />
+                <Category category={'Kids\' Meals'} data={menu} />
+                <Category category={'Desserts'} data={menu} />
+            </div>
+        )
         
     }
     return (
