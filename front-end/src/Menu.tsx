@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react'
 //import MenuItem from './MenuItem'
 import Category from './Category'
 
+
+
 const Menu = () => {
     const [menu, setMenu] = useState([])
     const fetchMenu = async () => {
@@ -12,7 +14,8 @@ const Menu = () => {
         if(data) {
             setMenu(data)
         } else {
-            setMenu(`Menu not found`)
+            let MNF:never[] = [(`Menu not found`) as never]
+            setMenu(MNF)
         }
     }
     

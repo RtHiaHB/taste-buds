@@ -13,7 +13,7 @@ const TBNavBar = () => {
                 <Nav.Link href="/locations">Locations</Nav.Link>
                 <Nav.Link href="/contact">Contact Us</Nav.Link>
                 <Nav.Link href="/menu">Menu</Nav.Link>
-                <Nav.Link href="/order">Takeout</Nav.Link>
+                <Nav.Link href="#">Takeout</Nav.Link>
                 <Nav.Link href="/events">Private Events</Nav.Link>
                 <Nav.Link href="/signin">Sign In</Nav.Link>
               </Nav>
