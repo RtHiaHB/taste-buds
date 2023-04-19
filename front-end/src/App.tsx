@@ -6,7 +6,6 @@ import Home from './Home';
 import Locations from './Locations';
 import Contact from './Contact'
 import Menu from './Menu'
-import Order from './Order'
 import Events from './Events';
 import SignIn from './SignIn';
 import "./css/style.css"
@@ -23,7 +22,6 @@ function App() {
           <Route path="/locations" element={<Locations />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/menu" element={<Menu />} />
-          <Route path="/order" element={<Order />} />
           <Route path="/events" element={<Events />} />
           <Route path="/signin" element={<SignIn />} />
         </Routes>

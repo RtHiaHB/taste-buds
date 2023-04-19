@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const jsx_runtime_1 = require("react/jsx-runtime");
+const react_bootstrap_1 = require("react-bootstrap");
+const TBNavBar = () => {
+    return ((0, jsx_runtime_1.jsx)(jsx_runtime_1.Fragment, { children: (0, jsx_runtime_1.jsx)(react_bootstrap_1.Navbar, Object.assign({ bg: "light", variant: "light" }, { children: (0, jsx_runtime_1.jsxs)(react_bootstrap_1.Container, { children: [(0, jsx_runtime_1.jsx)(react_bootstrap_1.Navbar.Brand, Object.assign({ href: "/" }, { children: "Taste Buds" })), (0, jsx_runtime_1.jsxs)(react_bootstrap_1.Nav, Object.assign({ className: "me-auto" }, { children: [(0, jsx_runtime_1.jsx)(react_bootstrap_1.Nav.Link, Object.assign({ href: "/" }, { children: "Home" })), (0, jsx_runtime_1.jsx)(react_bootstrap_1.Nav.Link, Object.assign({ href: "/about" }, { children: "About" })), (0, jsx_runtime_1.jsx)(react_bootstrap_1.Nav.Link, Object.assign({ href: "/locations" }, { children: "Locations" })), (0, jsx_runtime_1.jsx)(react_bootstrap_1.Nav.Link, Object.assign({ href: "/contact" }, { children: "Contact Us" })), (0, jsx_runtime_1.jsx)(react_bootstrap_1.Nav.Link, Object.assign({ href: "/menu" }, { children: "Menu" })), (0, jsx_runtime_1.jsx)(react_bootstrap_1.Nav.Link, Object.assign({ href: "#" }, { children: "Takeout" })), (0, jsx_runtime_1.jsx)(react_bootstrap_1.Nav.Link, Object.assign({ href: "/events" }, { children: "Private Events" })), (0, jsx_runtime_1.jsx)(react_bootstrap_1.Nav.Link, Object.assign({ href: "/signin" }, { children: "Sign In" }))] }))] }) })) }));
+};
+exports.default = TBNavBar;
