@@ -1,9 +1,11 @@
+'use strict'
 const users = require('express').Router()
-const db = require('../models')
+import {Request, Response} from 'express';
+import db from '../models'
 const { User } =  db
-const { Op } = require('sequelize')
+import { Op } from 'sequelize'
 
-users.get('/', async (req, res) => {
+users.get('/', async (req: Request, res: Response) => {
     try {
         const foundUsers = await User.findAll({
             order: [ [ 'email', 'ASC'] ],
@@ -18,7 +20,7 @@ users.get('/', async (req, res) => {
 })
 
 //Get a user by ID
-users.get('/:email', async (req, res)  => {
+users.get('/:email', async (req: Request, res: Response)  => {
     try {
         const foundUser = await User.findOne({
             where: { email: req.params.email }
@@ -30,7 +32,7 @@ users.get('/:email', async (req, res)  => {
 })
 
 //Create a user
-users.post('/', async (req, res) => {
+users.post('/', async (req: Request, res: Response) => {
     try {
         const newUser = await User.create(req.body)
         res.status(200).json({
@@ -43,7 +45,7 @@ users.post('/', async (req, res) => {
 })
 
 //Update a user
-users.put('/:id', async (req, res) => {
+users.put('/:id', async (req: Request, res: Response) => {
     try {
         const updatedUsers = await User.update(req.body, {
             where: {
@@ -59,7 +61,7 @@ users.put('/:id', async (req, res) => {
 })
 
 //Delete a user
-users.delete('/:id', async (req, res) => {
+users.delete('/:id', async (req: Request, res: Response) => {
     try {
         const deletedUsers = await User.destroy({
             where: {

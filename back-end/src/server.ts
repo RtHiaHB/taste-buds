@@ -1,5 +1,6 @@
 // DEPENDENCIES
 const express = require('express')
+import {Request, Response} from 'express';
 const cors = require('cors')
 const app = express()
 const { Sequelize } = require('sequelize')
@@ -11,7 +12,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(cors())
 
 //ROOT
-app.get('/', (req, res) => {
+app.get('/', (req:Request, res:Response) => {
     res.status(200).json({
         message: 'Welcome to the Taste Buds API'
     })

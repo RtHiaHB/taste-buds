@@ -1,9 +1,10 @@
 const items = require('express').Router()
+import {Request, Response} from 'express';
 const db = require('../models')
 const { Item } = db
 const { Op } = require('sequelize')
 
-items.get('/', async (req, res) => {
+items.get('/', async (req: Request, res: Response) => {
     try {
         const foundItems = await Item.findAll({
             where: {
@@ -17,7 +18,7 @@ items.get('/', async (req, res) => {
 })
 
 //get an item by ID
-items.get('/:id', async (req, res) => {
+items.get('/:id', async (req: Request, res: Response) => {
     try {
         const foundItem = await Item.findOne({
             where: { item_id: req.params.id }
@@ -29,7 +30,7 @@ items.get('/:id', async (req, res) => {
 })
 
 //add an item
-items.post('/', async (req, res) => {
+items.post('/', async (req: Request, res: Response) => {
     try {
         const newItem = await Item.create(req.body)
         res.status(200).json({
@@ -42,7 +43,7 @@ items.post('/', async (req, res) => {
 })
 
 //update an item
-items.put('/:id', async (req, res) => {
+items.put('/:id', async (req: Request, res: Response) => {
     try {
         const updatedItems = await Item.update(req.body, {
             where: {
@@ -58,7 +59,7 @@ items.put('/:id', async (req, res) => {
 })
 
 //delete an item
-items.delete('/:id', async (req, res) => {
+items.delete('/:id', async (req: Request, res: Response) => {
     try {
         const deletedItems = await Item.destroy({
             where: {

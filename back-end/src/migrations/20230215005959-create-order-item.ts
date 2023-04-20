@@ -1,7 +1,11 @@
 'use strict';
 /** @type {import('sequelize-cli').Migration} */
-module.exports = {
-  async up(queryInterface, Sequelize) {
+
+import { QueryInterface, DataTypes } from 'sequelize';
+import { Migration } from 'sequelize-cli';
+
+const migration: Migration = {
+  async up(queryInterface: QueryInterface, Sequelize: typeof DataTypes) {
     await queryInterface.createTable('Order_items', {
       order_items_id: {
         allowNull: false,
@@ -19,7 +23,9 @@ module.exports = {
       },
     });
   },
-  async down(queryInterface, Sequelize) {
+  async down(queryInterface: QueryInterface, Sequelize: typeof DataTypes) {
     await queryInterface.dropTable('Order_items');
   }
 };
+
+export default migration;
